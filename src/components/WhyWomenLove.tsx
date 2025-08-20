@@ -1,5 +1,6 @@
 import React from 'react';
 import { Star, Crown, Zap } from 'lucide-react';
+import { useContent } from '../contexts/ContentContext';
 
 const reasons = [
   {
@@ -20,22 +21,24 @@ const reasons = [
 ];
 
 const WhyWomenLove = () => {
+  const { content } = useContent();
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl text-[#0E0B0B] mb-8">
-            Why Women Love the <span className="text-[#D4AF37]">Magnetic Woman Empire</span>
+            {content.whyWomenLove.title} <span className="text-[#D4AF37]">{content.whyWomenLove.subtitle}</span>
           </h2>
         </div>
         
         <div className="max-w-5xl mx-auto">
           <div className="grid md:grid-cols-3 gap-12">
-            {reasons.map((reason, index) => (
+            {content.whyWomenLove.reasons.map((reason, index) => (
               <div key={index} className="text-center group">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-[#360A2C] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <reason.icon className="text-white" size={28} />
+                    <reasons[index].icon className="text-white" size={28} />
                   </div>
                 </div>
                 

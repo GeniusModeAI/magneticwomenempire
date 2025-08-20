@@ -12,6 +12,7 @@ export interface SiteContent {
     title: string;
     subtitle: string;
     description: string;
+    supportingText: string;
     ctaText: string;
   };
   about: {
@@ -26,17 +27,21 @@ export interface SiteContent {
       title: string;
       subtitle: string;
       description: string;
+      buttonText: string;
     }>;
   };
   howItWorks: {
     title: string;
+    titleScript: string;
     steps: Array<{
+      number: string;
       title: string;
       description: string;
     }>;
   };
   whyWomenLove: {
     title: string;
+    subtitle: string;
     reasons: Array<{
       title: string;
       description: string;

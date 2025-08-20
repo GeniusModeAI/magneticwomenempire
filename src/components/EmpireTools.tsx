@@ -1,6 +1,7 @@
 import React from 'react';
 import { Key, Heart, Moon, MessageCircle, Edit3 } from 'lucide-react';
 import { scrollToCheckout } from '../utils/scroll';
+import { useContent } from '../contexts/ContentContext';
 
 const tools = [
   {
@@ -41,27 +42,29 @@ const tools = [
 ];
 
 const EmpireTools = () => {
+  const { content } = useContent();
+
   return (
     <section className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="font-serif text-4xl md:text-5xl text-[#0E0B0B] mb-6">
-            Your <span className="text-[#D4AF37]">Magnetic Woman Empire</span> Tools
+            {content.empireTools.title} <span className="text-[#D4AF37]">{content.empireTools.subtitle}</span> Tools
           </h2>
           <div className="w-32 h-px bg-[#D4AF37] mx-auto mb-8"></div>
         </div>
         
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
-          {tools.map((tool, index) => (
+          {content.empireTools.tools.map((tool, index) => (
             <div 
               key={index} 
               className="group bg-[#FDF8F3] p-8 rounded-xl border border-gray-100 hover:border-[#D4AF37]/30 transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1"
             >
               <div className="text-center">
-                <div className="mb-6">
-                  <tool.icon className={`${tool.color} mx-auto mb-4`} size={48} />
+                                <div className="mb-6">
+                  <tools[index].icon className={`${tools[index].color} mx-auto mb-4`} size={48} />
                 </div>
-                
+              
                 <h3 className="font-serif text-xl font-bold text-[#0E0B0B] mb-2 tracking-wide">
                   {tool.title}
                 </h3>
@@ -79,7 +82,7 @@ const EmpireTools = () => {
                   className="w-full bg-[#360A2C] hover:bg-[#4A1539] text-white py-3 px-6 rounded-lg transition-all duration-300 group-hover:scale-105 border border-[#D4AF37]/30 hover:border-[#D4AF37]"
                 >
                   <span className="flex items-center justify-center">
-                    🗝️ <span className="ml-2">Enter</span>
+                    🗝️ <span className="ml-2">{tool.buttonText}</span>
                   </span>
                 </button>
               </div>

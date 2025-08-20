@@ -43,7 +43,7 @@ const Header = () => {
           </h2>
           
           <p className="text-lg mb-12 text-gray-200 max-w-3xl mx-auto leading-relaxed">
-            Discover the proven system empowering accomplished women to create the extraordinary relationships they desire — on their terms.
+            {content.header.supportingText}
           </p>
           
           <button 

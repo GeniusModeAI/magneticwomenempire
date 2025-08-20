@@ -9,6 +9,7 @@ const defaultContent: SiteContent = {
     title: 'MAGNETIC WOMAN EMPIRE™',
     subtitle: 'Where devotion, luxury, and sacred feminine power meet practical communication mastery.',
     description: 'Unlock the Magnetic Power to Attract, Cultivate, and Communicate™ Love',
+    supportingText: 'Discover the proven system empowering accomplished women to create the extraordinary relationships they desire — on their terms.',
     ctaText: 'Explore the Magnetic Woman Empire'
   },
   about: {
@@ -17,55 +18,65 @@ const defaultContent: SiteContent = {
     description2: 'Her programs combine neuroscience, sacred feminine embodiment, and high-performance psychology to help you shift your nervous system, release old patterns, and finally attract the love you deserve — without chasing, forcing, or lowering your standards.'
   },
   empireTools: {
-    title: 'Your Magnetic Woman Empire Tools',
+    title: 'Your',
     subtitle: 'Magnetic Woman Empire',
     tools: [
       {
         title: 'LAW OF DEVOTION',
         subtitle: 'Unlock Your Irresistible Feminine Power',
-        description: 'Principles to inspire deep, lifelong commitment from the right man.'
+        description: 'Principles to inspire deep, lifelong commitment from the right man.',
+        buttonText: 'Enter'
       },
       {
         title: 'MAGNETIC WOMAN LAUNCHPAD',
         subtitle: 'Find the Love You Desire in 90 Days',
-        description: 'A 4-step process to effortlessly attract high-quality men without the apps.'
+        description: 'A 4-step process to effortlessly attract high-quality men without the apps.',
+        buttonText: 'Enter'
       },
       {
         title: 'THERA SLEEP',
         subtitle: 'Restore Radiance While You Sleep',
-        description: 'Overnight nervous system reset, turning stress into feminine magnetism.'
+        description: 'Overnight nervous system reset, turning stress into feminine magnetism.',
+        buttonText: 'Enter'
       },
       {
         title: 'MAGNETIC COMMUNICATION COACH',
         subtitle: 'AI Wisdom for Authentic Connection',
-        description: 'An AI-powered guide to help you master captivating conversations and deep connection.'
+        description: 'An AI-powered guide to help you master captivating conversations and deep connection.',
+        buttonText: 'Enter'
       },
       {
         title: 'SOULMATE MAGNET PROFILE',
         subtitle: 'Write the Perfect Love Attraction Bio',
-        description: 'Position yourself online to attract your forever partner — while filtering out the wrong men.'
+        description: 'Position yourself online to attract your forever partner — while filtering out the wrong men.',
+        buttonText: 'Enter'
       }
     ]
   },
   howItWorks: {
-    title: 'How It Works',
+    title: 'How It',
+    titleScript: 'Works',
     steps: [
       {
+        number: '01',
         title: 'Choose the Transformation You Want Most',
         description: 'Whether it\'s unlocking devotion, finding love, restoring radiance, or perfecting your online profile — start with the door that calls to you most.'
       },
       {
+        number: '02',
         title: 'Start With the Right Program for You',
         description: 'Begin with one app or explore the whole Magnetic Woman Empire for a layered transformation. Each program works alone or together.'
       },
       {
+        number: '03',
         title: 'Experience Your Own Love Breakthrough',
         description: 'Your magnetic power awakens. Your nervous system shifts. Extraordinary men notice — and the right one steps forward.'
       }
     ]
   },
   whyWomenLove: {
-    title: 'Why Women Love the Magnetic Woman Empire',
+    title: 'Why Women Love the',
+    subtitle: 'Magnetic Woman Empire',
     reasons: [
       {
         title: 'Luxury Meets Science',
