@@ -147,7 +147,18 @@ export const ContentProvider: React.FC<ContentProviderProps> = ({ children }) =>
         }
       };
       
-      await updateDoc(docRef, updatedContent);
+      // Try to update first, if document doesn't exist, create it
+      try {
+        await updateDoc(docRef, updatedContent);
+      } catch (updateError: any) {
+        if (updateError.code === 'not-found') {
+          // Document doesn't exist, create it
+          await setDoc(docRef, updatedContent);
+        } else {
+          throw updateError;
+        }
+      }
+      
       setContent(updatedContent);
     } catch (error) {
       console.error('Error updating content:', error);

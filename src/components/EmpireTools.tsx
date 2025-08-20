@@ -1,5 +1,6 @@
 import React from 'react';
 import { Key, Heart, Moon, MessageCircle, Edit3 } from 'lucide-react';
+import { scrollToCheckout } from '../utils/scroll';
 
 const tools = [
   {
@@ -73,7 +74,10 @@ const EmpireTools = () => {
                   {tool.description}
                 </p>
                 
-                <button className="w-full bg-[#360A2C] hover:bg-[#4A1539] text-white py-3 px-6 rounded-lg transition-all duration-300 group-hover:scale-105 border border-[#D4AF37]/30 hover:border-[#D4AF37]">
+                <button 
+                  onClick={scrollToCheckout}
+                  className="w-full bg-[#360A2C] hover:bg-[#4A1539] text-white py-3 px-6 rounded-lg transition-all duration-300 group-hover:scale-105 border border-[#D4AF37]/30 hover:border-[#D4AF37]"
+                >
                   <span className="flex items-center justify-center">
                     🗝️ <span className="ml-2">Enter</span>
                   </span>

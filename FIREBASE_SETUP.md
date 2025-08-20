@@ -33,7 +33,7 @@ service cloud.firestore {
   match /databases/{database}/documents {
     match /siteContent/{document} {
       allow read: if true;
-      allow write: if request.auth != null;
+      allow write, create, update: if request.auth != null;
     }
   }
 }

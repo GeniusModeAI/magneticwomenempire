@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sparkles } from 'lucide-react';
 import { useContent } from '../contexts/ContentContext';
+import { scrollToCheckout } from '../utils/scroll';
 
 const FinalCTA = () => {
   const { content } = useContent();
@@ -36,7 +37,7 @@ const FinalCTA = () => {
           </p>
           
           {/* SamCart Checkout Integration */}
-          <div className="mb-8">
+          <div id="samcart-checkout" className="mb-8">
             <sc-checkout 
               product="magnetic-women-empire-main" 
               subdomain="animamundi" 

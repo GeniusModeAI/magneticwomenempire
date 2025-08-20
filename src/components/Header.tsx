@@ -1,6 +1,7 @@
 import React from 'react';
 import { Crown, Sparkles } from 'lucide-react';
 import { useContent } from '../contexts/ContentContext';
+import { scrollToCheckout } from '../utils/scroll';
 
 const Header = () => {
   const { content } = useContent();
@@ -45,7 +46,10 @@ const Header = () => {
             Discover the proven system empowering accomplished women to create the extraordinary relationships they desire — on their terms.
           </p>
           
-          <button className="group bg-[#360A2C] hover:bg-[#4A1539] text-white px-12 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#D4AF37]/30 hover:border-[#D4AF37]">
+          <button 
+            onClick={scrollToCheckout}
+            className="group bg-[#360A2C] hover:bg-[#4A1539] text-white px-12 py-4 rounded-lg text-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl border border-[#D4AF37]/30 hover:border-[#D4AF37]"
+          >
             <span className="flex items-center">
               🔑 <span className="ml-2">{content.header.ctaText}</span>
             </span>
