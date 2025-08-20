@@ -38,7 +38,10 @@ const WhyWomenLove = () => {
               <div key={index} className="text-center group">
                 <div className="mb-6">
                   <div className="w-16 h-16 bg-gradient-to-r from-[#360A2C] to-[#D4AF37] rounded-full flex items-center justify-center mx-auto group-hover:scale-110 transition-transform duration-300">
-                    <reasons[index].icon className="text-white" size={28} />
+                    {React.createElement(reasons[index].icon, {
+                      className: "text-white",
+                      size: 28
+                    })}
                   </div>
                 </div>
                 

@@ -62,7 +62,10 @@ const EmpireTools = () => {
             >
               <div className="text-center">
                                 <div className="mb-6">
-                  <tools[index].icon className={`${tools[index].color} mx-auto mb-4`} size={48} />
+                  {React.createElement(tools[index].icon, {
+                    className: `${tools[index].color} mx-auto mb-4`,
+                    size: 48
+                  })}
                 </div>
               
                 <h3 className="font-serif text-xl font-bold text-[#0E0B0B] mb-2 tracking-wide">
